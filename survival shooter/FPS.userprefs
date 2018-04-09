@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManagement\GameManager.cs">
+    <Files>
+      <File FileName="Assets\Scripts\GameManagement\UserSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManagement\AudioManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManagement\MainMenu.cs" Line="47" Column="36" />
+      <File FileName="Assets\Scripts\Player\PlayerController.cs" Line="136" Column="43" />
+      <File FileName="Assets\Scripts\Player\PlayerShooter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManagement\GameManager.cs" Line="10" Column="45" />
+      <File FileName="Assets\Shaders\Hologram.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerMotor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Utils\ColorChange.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
