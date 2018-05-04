@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerMotor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManagement\GameManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\PlayerMotor.cs" Line="51" Column="36" />
+      <File FileName="Assets\Scripts\Player\PlayerMotor.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameManagement\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerShooter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\WeaponManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameManagement\MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerWeapon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Input.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NavMovement.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\EnemyMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RobotMovement.cs" Line="7" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

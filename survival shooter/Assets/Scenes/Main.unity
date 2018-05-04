@@ -398,7 +398,6 @@ GameObject:
   - component: {fileID: 955856083}
   - component: {fileID: 955856082}
   - component: {fileID: 955856081}
-  - component: {fileID: 955856080}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -406,19 +405,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &955856080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 955856079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1330d596522656444963b449cbd7c1f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
-  camera: {fileID: 1011024020}
 --- !u!195 &955856081
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -506,11 +492,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1011024020 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 20077861138014602, guid: 257f72e0e72b67747849a26f474c69ed,
-    type: 2}
-  m_PrefabInternal: {fileID: 469487958}
 --- !u!1001 &1016876835
 Prefab:
   m_ObjectHideFlags: 0

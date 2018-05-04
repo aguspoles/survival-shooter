@@ -17,12 +17,9 @@ public class NavMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
-			Ray ray = camera.ScreenPointToRay (Input.mousePosition);
-			RaycastHit hit;
-			if (Physics.Raycast (ray, out hit)) {
-				m_agent.SetDestination (hit.point);
-			}
-		}
+	}
+
+	public void Move(Vector3 pos){
+		m_agent.SetDestination (pos);
 	}
 }
