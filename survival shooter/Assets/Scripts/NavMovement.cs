@@ -7,11 +7,9 @@ using UnityEngine.AI;
 public class NavMovement : MonoBehaviour {
 
 	private NavMeshAgent m_agent;
-	public Vector3 position;
-	public Camera camera;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		m_agent = GetComponent<NavMeshAgent> ();
 	}
 	
