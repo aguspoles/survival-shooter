@@ -5,10 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
 
-	[SerializeField]
-	private float m_speed = 5f;
-	private float m_xMov;
-	private float m_zMov;
+	public float speed = 5f;
 
 	[SerializeField]
 	private float m_thrusterForce = 1000f;
@@ -32,14 +29,28 @@ public class PlayerController : MonoBehaviour {
 	public Animator m_animator;
 
 	void Start () {
-		m_motor = GetComponent<PlayerMotor> ();
 		m_gameManager = GameObject.Find ("GameController").GetComponent<GameManager> ();
+		m_motor = GetComponent<PlayerMotor> ();
 	}
 
 	void Update () {
-		Move ();
-		Rotate ();
-		CheckDash ();
+	}
+
+	public void Walk(float xMov, float zMov){
+		Vector3 moveHorizontal = transform.right * xMov * speed;
+		Vector3 moveVertical = transform.forward * zMov * speed;
+
+		m_motor.MoveHorizontal (moveHorizontal);
+		m_motor.MoveVertical (moveVertical);
+	}
+
+	public void Rotate(float xRot, float yRot){
+		//turning around
+		float rotation = yRot * GameManager.mouseSensitivity * Time.deltaTime;
+		m_motor.RotateY (rotation);
+		//calculate camera rotation
+		float cameraRotationX = xRot * -GameManager.mouseSensitivity * Time.deltaTime;
+		m_motor.RotateCameraX (cameraRotationX);
 	}
 
 	public float GetThrusterFuel(){
@@ -52,18 +63,6 @@ public class PlayerController : MonoBehaviour {
 		m_dashActivated = true;
 	}
 
-	private void Move(){
-		//calculate movement
-		m_xMov = Input.GetAxisRaw ("Horizontal");
-		m_zMov = Input.GetAxisRaw ("Vertical");
-
-		Vector3 moveHorizontal = transform.right * m_xMov * m_speed;
-		Vector3 moveVertical = transform.forward * m_zMov * m_speed;
-
-		m_motor.MoveHorizontal (moveHorizontal);
-		m_motor.MoveVertical (moveVertical);
-	}
-
 
 	void OnCollisionEnter(Collision other){
 		if (other.collider.tag == "Obstacle" || other.collider.tag == "Destroyable") {
@@ -73,7 +72,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void CheckDash(){
+	/*void CheckDash(){
 		if (Input.GetKeyDown(KeyCode.LeftShift) && m_thrusterFuelAmount > 0f && m_dashActivated) {
 			m_thrusterFuelAmount -= m_thrusterFuelBurnSpeed * Time.deltaTime;
 			StartCoroutine (DashCollDown (m_dashCoolDown));
@@ -85,19 +84,7 @@ public class PlayerController : MonoBehaviour {
 					m_animator.Play ("leftDash");
 				}
 				FindObjectOfType<AudioManager> ().Play ("Dash");		}
-	}
-
-	void Rotate(){
-		//turning around
-		float yRot = Input.GetAxisRaw ("Mouse X");
-		float rotation = yRot * GameManager.mouseSensitivity * Time.deltaTime;
-		m_motor.RotateY (rotation);
-
-		//calculate camera rotation
-		float xRot = Input.GetAxisRaw ("Mouse Y");
-		float cameraRotationX = xRot * -GameManager.mouseSensitivity * Time.deltaTime;
-		m_motor.RotateCameraX (cameraRotationX);
-	}
+	}*/
 
 	IEnumerator WaitForRefuel(){
 		yield return new WaitForSeconds (0.5f);

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class RobotMovement : NavMovement {
 
-	public Camera camera;
+	[SerializeField]
+	private Camera m_camera;
 
 	// Use this for initialization
 	void Start () {
-		if (camera == null) {
+		if (m_camera == null) {
 			Debug.Log ("RobotMovement: no reference to a camera");
 			this.enabled = false;
 		}
@@ -16,11 +17,13 @@ public class RobotMovement : NavMovement {
 	
 	// Update is called once per frame
 	void Update(){
-		if (Input.GetMouseButtonDown (1)) {
-			RaycastHit hit;
-			Ray ray = camera.ScreenPointToRay (Input.mousePosition);
-			if(Physics.Raycast (ray, out hit))
-				base.Move (hit.point);
-		}
+
+	}
+
+	public void Move(){
+		RaycastHit hit;
+		Ray ray = m_camera.ScreenPointToRay (Input.mousePosition);
+		if(Physics.Raycast (ray, out hit))
+			base.Move (hit.point);
 	}
 }

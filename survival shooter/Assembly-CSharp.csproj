@@ -51,17 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Environment\WarZone\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
-     <Compile Include="Assets\Environment\WarZone\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
-     <Compile Include="Assets\Environment\WarZone\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-     <Compile Include="Assets\Environment\WarZone\CrossPlatformInput\Scripts\VirtualInput.cs" />
-     <Compile Include="Assets\Environment\WarZone\Scripts\DestroyObject.cs" />
-     <Compile Include="Assets\Environment\WarZone\Scripts\GunController.cs" />
-     <Compile Include="Assets\Environment\WarZone\Scripts\TurretController.cs" />
-     <Compile Include="Assets\Environment\WarZone\Vehicles\Car\Scripts\CarAudio.cs" />
-     <Compile Include="Assets\Environment\WarZone\Vehicles\Car\Scripts\CarController.cs" />
-     <Compile Include="Assets\Environment\WarZone\Vehicles\Car\Scripts\CarUserControl.cs" />
-     <Compile Include="Assets\Environment\WarZone\Vehicles\Car\Scripts\WheelEffects.cs" />
      <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -108,9 +97,9 @@
      <Compile Include="Assets\Scripts\GameManagement\MainMenu.cs" />
      <Compile Include="Assets\Scripts\GameManagement\Sound.cs" />
      <Compile Include="Assets\Scripts\GameManagement\UserSettings.cs" />
-     <Compile Include="Assets\Scripts\InputI.cs" />
-     <Compile Include="Assets\Scripts\InputManager.cs" />
-     <Compile Include="Assets\Scripts\Keyboard.cs" />
+     <Compile Include="Assets\Scripts\Input\IInput.cs" />
+     <Compile Include="Assets\Scripts\Input\InputManager.cs" />
+     <Compile Include="Assets\Scripts\Input\Keyboard.cs" />
      <Compile Include="Assets\Scripts\NavMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
@@ -213,7 +202,6 @@
      <None Include="Assets\Models\sci-fi-weapons\README.txt" />
      <None Include="Assets\GUI\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\GUI\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\Audio\Music\telemechanical\_Telemechanical.txt" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
      <None Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
@@ -238,9 +226,7 @@
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
-     <None Include="Assets\Textures\general-texture-pack\README.txt" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Shaders\Bloom.shader" />
-     <None Include="Assets\Environment\WarZone\Vehicles\Car\CarGuidelines.txt" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
      <None Include="Assets\VFX\Unity Particle Effects\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
