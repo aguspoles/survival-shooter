@@ -6,11 +6,11 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class NavMovement : MonoBehaviour {
 
-	private NavMeshAgent m_agent;
+	protected NavMeshAgent agent;
 
 	// Use this for initialization
 	void Awake () {
-		m_agent = GetComponent<NavMeshAgent> ();
+		agent = GetComponent<NavMeshAgent> ();
 	}
 	
 	// Update is called once per frame
@@ -18,6 +18,6 @@ public class NavMovement : MonoBehaviour {
 	}
 
 	public void Move(Vector3 pos){
-		m_agent.SetDestination (pos);
+		agent.SetDestination (pos);
 	}
 }
