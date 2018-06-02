@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-//using Complete;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class StateController : MonoBehaviour {
 
@@ -13,7 +13,7 @@ public class StateController : MonoBehaviour {
 	public List<Transform> wayPointList;
 
 	[HideInInspector] public NavMeshAgent navMeshAgent;
-	//[HideInInspector] public Complete.TankShooting tankShooting;
+	[HideInInspector] public ThirdPersonCharacter enemyController;
 	[HideInInspector] public int nextWayPoint;
 	[HideInInspector] public Transform chaseTarget;
 	[HideInInspector] public float stateTimeElapsed;
@@ -21,8 +21,9 @@ public class StateController : MonoBehaviour {
 
 	void Awake () 
 	{
-		//tankShooting = GetComponent<Complete.TankShooting> ();
+		enemyController = GetComponent<ThirdPersonCharacter> ();
 		navMeshAgent = GetComponent<NavMeshAgent> ();
+		navMeshAgent.updateRotation = false;
 	}
 
 

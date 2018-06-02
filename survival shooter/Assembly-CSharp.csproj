@@ -83,6 +83,7 @@
      <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\Models\LowMan\Scripts\ThirdPersonCharacter.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -91,7 +92,6 @@
      <Compile Include="Assets\Scripts\Enemy\Life.cs" />
      <Compile Include="Assets\Scripts\Enemy\Spawner.cs" />
      <Compile Include="Assets\Scripts\Enemy\Tracker.cs" />
-     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\GameManagement\AudioManager.cs" />
      <Compile Include="Assets\Scripts\GameManagement\Fade.cs" />
      <Compile Include="Assets\Scripts\GameManagement\GameManager.cs" />
