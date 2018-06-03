@@ -73,8 +73,8 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Jump
-    clip: {fileID: 8300000, guid: 80338ce5d7be63d46a0ddc0bfebf6433, type: 3}
+  - name: Collect
+    clip: {fileID: 8300000, guid: 0f713c8c238996d41959a672d7913f6c, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 80f69bb2b57212c49a6db86c5ce37beb, type: 2}
     volume: 1
     pitch: 1
@@ -95,14 +95,14 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Navigate
-    clip: {fileID: 8300000, guid: 0f2c5218f58e21d47aa4ce5ef15fe95b, type: 3}
+    clip: {fileID: 8300000, guid: 3b7a828a646174088aa48ee1db9c439c, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 80f69bb2b57212c49a6db86c5ce37beb, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Level0Music
-    clip: {fileID: 8300000, guid: b469ec4de134fa6498a1eec00844eece, type: 3}
+    clip: {fileID: 8300000, guid: cdc9bfb15415f8146a0c809e6188e5d9, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 80f69bb2b57212c49a6db86c5ce37beb, type: 2}
     volume: 0.485
     pitch: 1

@@ -169,6 +169,7 @@
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+     <Compile Include="Assets\Scripts\DrawCollectable.cs" />
      <Compile Include="Assets\Scripts\Enemy\Events.cs" />
      <Compile Include="Assets\Scripts\Enemy\Life.cs" />
      <Compile Include="Assets\Scripts\Enemy\Spawner.cs" />
@@ -201,6 +202,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\StateController.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\States\State.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Transition.cs" />
+     <Compile Include="Assets\Scripts\Utils\Collectable.cs" />
      <Compile Include="Assets\Scripts\Utils\ColorChange.cs" />
      <Compile Include="Assets\Scripts\Utils\Pool.cs" />
      <Compile Include="Assets\Scripts\Utils\PoolManager.cs" />
@@ -233,7 +235,6 @@
      <None Include="Assets\Environment\voxel_scifi_free\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Environment\voxel_scifi_free\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
      <None Include="Assets\Environment\voxel_scifi_free\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
-     <None Include="Assets\Environment\_Creepy_Cat\_3D Scifi Kit Starter Kit\_Docs\Doc.txt" />
      <None Include="Assets\GUI\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\GUI\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Environment\voxel_scifi_free\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />

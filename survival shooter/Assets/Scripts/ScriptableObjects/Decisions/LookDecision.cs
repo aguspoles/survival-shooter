@@ -16,14 +16,13 @@ public class LookDecision : Decision {
 		RaycastHit hit;
 
 		Debug.DrawRay (controller.eyes.position, controller.eyes.forward.normalized * controller.enemyStats.lookRange, Color.green);
+		bool hitRay = Physics.SphereCast (controller.eyes.position, controller.enemyStats.lookSphereCastRadius, controller.eyes.forward, out hit, controller.enemyStats.lookRange);
 
-		if (Physics.SphereCast (controller.eyes.position, controller.enemyStats.lookSphereCastRadius, controller.eyes.forward, out hit, controller.enemyStats.lookRange)
-			&& hit.collider.CompareTag ("Player")) {
-			controller.chaseTarget = hit.transform;
-			return true;
-		} else 
-		{
-			return false;
-		}
+		if (hitRay && hit.collider.CompareTag("Player")) {
+				controller.chaseTarget = hit.transform;
+				return true;
+		} else {
+				return false;
+			}
 	}
 }

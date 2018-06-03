@@ -23,6 +23,7 @@ public class StateController : MonoBehaviour {
 	{
 		enemyController = GetComponent<ThirdPersonCharacter> ();
 		navMeshAgent = GetComponent<NavMeshAgent> ();
+
 		navMeshAgent.updateRotation = false;
 	}
 
@@ -46,6 +47,7 @@ public class StateController : MonoBehaviour {
 		if (nextState != remainState) 
 		{
 			currentState = nextState;
+			//remainState = currentState;
 			OnExitState ();
 		}
 	}

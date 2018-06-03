@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed = 5f;
+	private bool death = false;
 
 	[SerializeField]
 	private float m_thrusterForce = 1000f;
@@ -65,10 +66,12 @@ public class PlayerController : MonoBehaviour {
 
 
 	void OnCollisionEnter(Collision other){
-		if (other.collider.tag == "Obstacle" || other.collider.tag == "Destroyable") {
-			m_gameManager.RestartLevel ();
-			FindObjectOfType<AudioManager> ().Play ("Die");
-			this.gameObject.GetComponent<Collider> ().enabled = false;
+		if (!death) {
+			if (other.collider.tag == "Obstacle" || other.collider.tag == "Destroyable") {
+				FindObjectOfType<AudioManager> ().Play ("Die");
+				m_gameManager.RestartLevel ();
+				death = true;
+			}
 		}
 	}
 

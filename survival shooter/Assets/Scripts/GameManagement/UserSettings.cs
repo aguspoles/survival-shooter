@@ -5,23 +5,15 @@ using UnityEngine.UI;
 
 public class UserSettings : MonoBehaviour {
 
-	//private static UserSettings instance;
-
 	[SerializeField]
 	private GameObject graphics;
 
 	void Awake () {
-		/*if (instance == null)
-			instance = this;
-		else {
-			Destroy (gameObject);
-			return;
-		}
-
-		DontDestroyOnLoad (gameObject);*/
+		
 	}
 
 	void Start(){
+		Cursor.visible = true;
 		Dropdown dropDownGraphics = graphics.GetComponentInChildren<Dropdown> ();
 		if (dropDownGraphics == null) {
 			Debug.Log ("Dropdown UI component not found");

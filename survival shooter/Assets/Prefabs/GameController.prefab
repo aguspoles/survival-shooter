@@ -52,3 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fadeTime: 1.5
+  pauseGameObject: {fileID: 0}
+  m_MessageText: {fileID: 0}

@@ -219,11 +219,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4710950278251032}
   - component: {fileID: 54543491251208506}
+  - component: {fileID: 136121687974940798}
   - component: {fileID: 114639568204237898}
   - component: {fileID: 114402609066882794}
   - component: {fileID: 114512919257913042}
   - component: {fileID: 114286322426408678}
-  - component: {fileID: 136121687974940798}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_primaryWeapon:
     Name: AK-47
     Damage: 10
-    Range: 100
+    Range: 10
     FireRate: 10
     Graphics: {fileID: 1245108295752764}
   m_weaponHolder: {fileID: 4814842269865928}
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f81ab64a7cb5a4489c39c62f971c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   m_thrusterForce: 500
   m_thrusterFuelRegenSpeed: 0.4
   m_thrusterFuelBurnSpeed: 10
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_camera: {fileID: 20133295551933492}
   m_dashForce: 0
   m_dashActivated: 0
-  m_cameraRotationLimit: 85
+  m_cameraRotationLimit: 360
 --- !u!124 &124401996210555422
 Behaviour:
   m_ObjectHideFlags: 1
