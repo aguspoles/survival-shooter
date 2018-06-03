@@ -7,6 +7,6 @@ public interface IInput {
 	void Rotate (PlayerController controller);
 	void Run (PlayerController controller);
 	void Shoot (PlayerShooter shooter);
-	void ControllRobot (RobotMovement robotMove);
+	//void ControllRobot (RobotMovement robotMove);
 }
 

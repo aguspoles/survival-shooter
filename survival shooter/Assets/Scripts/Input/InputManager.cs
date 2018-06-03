@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour {
 	private PlayerShooter m_shooter;
 	[SerializeField]
 	private GameObject m_robot;
-	private RobotMovement m_robotMove;
+	//private RobotMovement m_robotMove;
 
 	void Awake(){
 		if (instance == null)
@@ -24,19 +24,20 @@ public class InputManager : MonoBehaviour {
 			return;
 		}
 
-		DontDestroyOnLoad (gameObject);
-
 		activeInput = new Keyboard();
 
 		if (m_player) {
 			m_controller = m_player.GetComponent<PlayerController> ();
 			m_motor = m_player.GetComponent<PlayerMotor> ();
 			m_shooter = m_player.GetComponent<PlayerShooter> ();
-		} else
+		} else {
+			m_player = GameObject.FindGameObjectWithTag ("Player");
 			Debug.Log ("InputManager: player is null");
+		}
 		
 		if (m_robot) {
-			m_robotMove = m_robot.GetComponent<RobotMovement> ();
+			m_robot = GameObject.FindGameObjectWithTag ("Robot");
+			//m_robotMove = m_robot.GetComponent<RobotMovement> ();
 		}
 		else 
 			Debug.Log ("InputManager: robot is null");
@@ -51,6 +52,6 @@ public class InputManager : MonoBehaviour {
 		activeInput.Walk (m_controller);
 		activeInput.Rotate (m_controller);
 		activeInput.Shoot (m_shooter);
-		activeInput.ControllRobot (m_robotMove);
+		//activeInput.ControllRobot (m_robotMove);
 	}
 }

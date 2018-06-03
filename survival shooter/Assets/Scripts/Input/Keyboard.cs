@@ -44,9 +44,9 @@ public class Keyboard : IInput {
 		}
 	}
 
-	public void ControllRobot (RobotMovement robotMove){
+	/*public void ControllRobot (RobotMovement robotMove){
 		if (Input.GetMouseButtonDown (1)) {
 			robotMove.Move ();
 		}
-	}
+	}*/
 }
