@@ -12,9 +12,6 @@ public class InputManager : MonoBehaviour {
 	private PlayerController m_controller;
 	private PlayerMotor m_motor;
 	private PlayerShooter m_shooter;
-	[SerializeField]
-	private GameObject m_robot;
-	//private RobotMovement m_robotMove;
 
 	void Awake(){
 		if (instance == null)
@@ -24,7 +21,24 @@ public class InputManager : MonoBehaviour {
 			return;
 		}
 
+#if UNITY_STANDALONE_WIN
 		activeInput = new Keyboard();
+#elif UNITY_ANDROID
+		Mobile mobile = new Mobile();
+		GameObject ui = GameObject.Find("MobileUI");
+		for (int i = 0; i < ui.transform.childCount; i++)
+		{
+			ui.transform.GetChild(i).gameObject.SetActive(true);
+		}
+
+		mobile.moveJoystick = ui.GetComponentInChildren<FixedJoystick>();
+		mobile.touchField = ui.GetComponentInChildren<FixedTouchField>();
+		mobile.shootButton = ui.GetComponentInChildren<FixedButton>();
+
+		activeInput = mobile;
+#else 
+		activeInput = new Keyboard();
+#endif
 
 		if (m_player) {
 			m_controller = m_player.GetComponent<PlayerController> ();
@@ -34,13 +48,6 @@ public class InputManager : MonoBehaviour {
 			m_player = GameObject.FindGameObjectWithTag ("Player");
 			Debug.Log ("InputManager: player is null");
 		}
-		
-		if (m_robot) {
-			m_robot = GameObject.FindGameObjectWithTag ("Robot");
-			//m_robotMove = m_robot.GetComponent<RobotMovement> ();
-		}
-		else 
-			Debug.Log ("InputManager: robot is null");
 	}
 
 	// Use this for initialization
@@ -52,6 +59,5 @@ public class InputManager : MonoBehaviour {
 		activeInput.Walk (m_controller);
 		activeInput.Rotate (m_controller);
 		activeInput.Shoot (m_shooter);
-		//activeInput.ControllRobot (m_robotMove);
 	}
 }

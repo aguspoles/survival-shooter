@@ -26,7 +26,7 @@ using UnityEngine.UI;
 
 		private void Start()
 		{
-		    Cursor.visible = false;
+		    //Cursor.visible = false;
 		}
 
 		private void Update(){
@@ -57,7 +57,7 @@ using UnityEngine.UI;
 		}
 
 		public void Resume(){
-		    Cursor.visible = false;
+		   // Cursor.visible = false;
 			pauseGameObject.SetActive (false);
 			GameIsPaused = false;
 			Time.timeScale = 1f;
