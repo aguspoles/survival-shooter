@@ -402,6 +402,10 @@
     <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\GUI\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\GUI\Virtual Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\GUI\Virtual Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\GUI\Virtual Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\GUI\Virtual Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Models\LowMan\Scripts\ThirdPersonCharacter.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
@@ -457,11 +461,6 @@
     <Compile Include="Assets\VFX\Unity Particle Effects\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\VFX\Unity Particle Effects\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\VFX\Unity Particle Effects\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-    <Compile Include="Assets\Virtual Joystick Pack\Example\PlayerExample.cs" />
-    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
-    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Audio\SFX\launches\info.txt" />

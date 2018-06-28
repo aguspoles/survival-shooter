@@ -4,5 +4,6 @@ public interface IInput {
 	void Rotate (PlayerController controller);
 	void Run (PlayerController controller);
 	void Shoot (PlayerShooter shooter);
+	void Pause();
 }
 

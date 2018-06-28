@@ -13,7 +13,7 @@ public class Mobile : IInput {
 		//calculate movement
 		float xMov = moveJoystick.inputVector.x;
 		float zMov = moveJoystick.inputVector.y;
-	
+
 		controller.Walk(xMov, zMov);
 	}
 
@@ -59,5 +59,10 @@ public class Mobile : IInput {
 		{
 			shooter.CancelShoot();
 		}
+	}
+
+	public void Pause()
+	{
+		Debug.Log("Hay que Implementar Pause en Mobile");
 	}
 }

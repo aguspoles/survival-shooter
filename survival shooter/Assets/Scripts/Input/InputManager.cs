@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour {
+public class InputManager : MonoBehaviour
+{
 
 	private static InputManager instance;
 	private IInput activeInput;
@@ -13,11 +14,13 @@ public class InputManager : MonoBehaviour {
 	private PlayerMotor m_motor;
 	private PlayerShooter m_shooter;
 
-	void Awake(){
+	void Awake()
+	{
 		if (instance == null)
 			instance = this;
-		else {
-			Destroy (gameObject);
+		else
+		{
+			Destroy(gameObject);
 			return;
 		}
 
@@ -36,28 +39,34 @@ public class InputManager : MonoBehaviour {
 		mobile.shootButton = ui.GetComponentInChildren<FixedButton>();
 
 		activeInput = mobile;
-#else 
+#else
 		activeInput = new Keyboard();
 #endif
 
-		if (m_player) {
-			m_controller = m_player.GetComponent<PlayerController> ();
-			m_motor = m_player.GetComponent<PlayerMotor> ();
-			m_shooter = m_player.GetComponent<PlayerShooter> ();
-		} else {
-			m_player = GameObject.FindGameObjectWithTag ("Player");
-			Debug.Log ("InputManager: player is null");
+		if (m_player)
+		{
+			m_controller = m_player.GetComponent<PlayerController>();
+			m_motor = m_player.GetComponent<PlayerMotor>();
+			m_shooter = m_player.GetComponent<PlayerShooter>();
+		}
+		else
+		{
+			m_player = GameObject.FindGameObjectWithTag("Player");
+			Debug.Log("InputManager: player is null");
 		}
 	}
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		activeInput.Walk (m_controller);
-		activeInput.Rotate (m_controller);
-		activeInput.Shoot (m_shooter);
+	void Update()
+	{
+		activeInput.Walk(m_controller);
+		activeInput.Rotate(m_controller);
+		activeInput.Shoot(m_shooter);
+		activeInput.Pause();
 	}
 }

@@ -13,6 +13,7 @@ public class PlayerShooter : MonoBehaviour {
 	private float m_impactForce = 30f;
 
 	private WeaponManager m_weaponManager;
+	private PoolManager m_poolManager;
 	public PlayerWeapon currentWeapon;
 	public Animator m_animator;
 
@@ -22,6 +23,7 @@ public class PlayerShooter : MonoBehaviour {
 			this.enabled = false;
 		}
 		m_weaponManager = GetComponent<WeaponManager> ();
+		m_poolManager = FindObjectOfType<PoolManager>();
 	}
 
 	void Update(){
@@ -59,7 +61,17 @@ public class PlayerShooter : MonoBehaviour {
 	}
 
 	private void HitEffect(Vector3 pos, Vector3 normal){
-		GameObject hitEffect = Instantiate (m_weaponManager.GetWeaponVFX ().hitEffect, pos, Quaternion.LookRotation (normal));
-		Destroy (hitEffect, 0.2f);
+		Pool bulletEffectPool = m_poolManager.GetPool("BulletEffectPool");
+		PoolObject bulletEffectObject = bulletEffectPool.GetPooledObject();
+		bulletEffectObject.gameObject.transform.position = new Vector3(pos.x, pos.y, pos.z);
+		bulletEffectObject.gameObject.transform.rotation = Quaternion.LookRotation(normal);
+		StartCoroutine(RecycleBulletEffect(bulletEffectObject));
+		//GameObject hitEffect = Instantiate (m_weaponManager.GetWeaponVFX ().hitEffect, pos, Quaternion.LookRotation (normal));
+		//Destroy (hitEffect, 0.2f);
+	}
+
+	IEnumerator RecycleBulletEffect(PoolObject reciclable) {
+		yield return new WaitForSeconds(0.5f);
+		reciclable.Recycle();
 	}
 }
