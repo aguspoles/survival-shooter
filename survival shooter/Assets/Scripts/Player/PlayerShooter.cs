@@ -53,7 +53,7 @@ public class PlayerShooter : MonoBehaviour {
 	}
 
 	public void ShootRepeating(){
-		InvokeRepeating ("Shoot", 0f, 1f / currentWeapon.FireRate);
+		InvokeRepeating ("Shoot", 0f, 2f / currentWeapon.FireRate);
 	}
 	public void CancelShoot(){
 		CancelInvoke ("Shoot");

@@ -36,7 +36,14 @@ public class InputManager : MonoBehaviour
 
 		mobile.moveJoystick = ui.GetComponentInChildren<FixedJoystick>();
 		mobile.touchField = ui.GetComponentInChildren<FixedTouchField>();
-		mobile.shootButton = ui.GetComponentInChildren<FixedButton>();
+		FixedButton[] buttons = ui.GetComponentsInChildren<FixedButton>();
+		for (int i = 0; i < buttons.Length; i++) {
+			if (buttons[i].gameObject.name == "ShootButton")
+				mobile.shootButton = buttons[i];
+			else if (buttons[i].gameObject.name == "PauseButton")
+				mobile.pauseButton = buttons[i];
+			else Debug.Log("Buttons names cant be recognize");
+		}
 
 		activeInput = mobile;
 #else

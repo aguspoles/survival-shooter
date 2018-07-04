@@ -7,6 +7,7 @@ public class Mobile : IInput {
 	public FixedJoystick moveJoystick;
 	public FixedTouchField touchField;
 	public FixedButton shootButton;
+	public FixedButton pauseButton;
 
 	public void Walk(PlayerController controller)
 	{
@@ -63,6 +64,8 @@ public class Mobile : IInput {
 
 	public void Pause()
 	{
-		Debug.Log("Hay que Implementar Pause en Mobile");
+		if (pauseButton.Pressed) {
+			GameManager.playerPauseTheGame = true;
+		}
 	}
 }
