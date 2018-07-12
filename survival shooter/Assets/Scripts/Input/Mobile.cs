@@ -33,9 +33,9 @@ public class Mobile : IInput {
 
 	public void Shoot(PlayerShooter shooter)
 	{
-		if (GameManager.isRestarting == false)
+		if (GameManager.isRestarting == false && !GameManager.GameIsPaused
+			&& !GameManager.playerPauseTheGame)
 		{
-
 			if (shooter.currentWeapon.FireRate <= 0f)
 			{
 				if (shootButton.Pressed)

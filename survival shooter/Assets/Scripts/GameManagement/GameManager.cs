@@ -38,10 +38,11 @@ public class GameManager : MonoBehaviour
 			if (GameIsPaused)
 				Resume();
 			else
-				Pause();
+			    Pause();
 
 			playerPauseTheGame = false;
 		}
+
 		if (RobotsCollected >= RobotsToWin)
 		{
 			RestartLevel();
@@ -75,6 +76,8 @@ public class GameManager : MonoBehaviour
 	{
 		Cursor.visible = true;
 		pauseGameObject.SetActive(true);
+		pauseGameObject.transform.Find("OptionsMenu").gameObject.SetActive(false);
+		pauseGameObject.transform.Find("PauseMenu").gameObject.SetActive(true);
 		GameIsPaused = true;
 		Time.timeScale = 0f;
 	}

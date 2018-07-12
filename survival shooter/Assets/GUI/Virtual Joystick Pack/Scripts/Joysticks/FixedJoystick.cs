@@ -11,13 +11,13 @@ public class FixedJoystick : Joystick
 
     void Start()
     {
-        joystickPosition = RectTransformUtility.WorldToScreenPoint(cam, background.position);
+        joystickPosition = RectTransformUtility.WorldToScreenPoint(cam, handle.position);
     }
 
     public override void OnDrag(PointerEventData eventData)
     {
         Vector2 direction = eventData.position - joystickPosition;
-        inputVector = (direction.magnitude > background.sizeDelta.x / 2f) ? direction.normalized : direction / (background.sizeDelta.x / 2f);
+		inputVector = (direction.magnitude > background.sizeDelta.x / 2f) ? direction.normalized : (direction / (background.sizeDelta.x / 2f)).normalized;
         handle.anchoredPosition = (inputVector * background.sizeDelta.x / 2f) * handleLimit;
     }
 
